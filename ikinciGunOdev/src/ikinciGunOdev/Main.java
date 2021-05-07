@@ -18,7 +18,7 @@ public class Main {
 		List<FrequentlyAskedQuestion> questionList = new ArrayList<FrequentlyAskedQuestion>();
 		
 		CourseCardService courseCardService = new CourseCardManager();
-		FrequentlyAskedQuestionService frequentlyAskedQuestionManager = new FrequentlyAskedQuestionManager();
+		FrequentlyAskedQuestionService frequentlyAskedQuestionService = new FrequentlyAskedQuestionManager();
 		
 		//Kurs kart işlemleri
 		CourseCard javaCourseCard = new CourseCard(1,"Java Kurs İmage","Java Kurs",75,1);
@@ -34,26 +34,26 @@ public class Main {
 			
 		//SSS tek tek ekleme.
 		for (FrequentlyAskedQuestion frequentlyAskedQuestion : questionList) {
-			frequentlyAskedQuestionManager.add(frequentlyAskedQuestion);
+			frequentlyAskedQuestionService.add(frequentlyAskedQuestion);
 		}
 			
 		//id' ye göre SSS getirme
 		System.out.println();
 		System.out.println("Cevabı bilinen bir sık sorulan soruyu id' sine göre getir");
-		FrequentlyAskedQuestion question = frequentlyAskedQuestionManager.getById(0);
+		FrequentlyAskedQuestion question = frequentlyAskedQuestionService.getById(0);
 		System.out.println(question.getQuestion()+ " => " + question.getAnswer());
 		
 		//SSS hepsini getir
 		System.out.println();
 		System.out.println("Sık Sorulan Sorular");
-		List<FrequentlyAskedQuestion> frequentlyAskedQuestionList =  frequentlyAskedQuestionManager.getAll();
+		List<FrequentlyAskedQuestion> frequentlyAskedQuestionList =  frequentlyAskedQuestionService.getAll();
 		
 		for (FrequentlyAskedQuestion frequentlyAskedQuestion : frequentlyAskedQuestionList) {
 			System.out.println(frequentlyAskedQuestion.getQuestion()+ " => " + frequentlyAskedQuestion.getAnswer());
 		}
 		
 		//liste olarak ekleme. frequentlyAskedQuestionManager
-		frequentlyAskedQuestionManager.addList(questionList);
+		frequentlyAskedQuestionService.addList(questionList);
 					
 	}
 
