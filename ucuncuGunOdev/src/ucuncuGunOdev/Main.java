@@ -16,6 +16,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		List<Student> studentList = new ArrayList<Student>();
+		List<User> userList = new ArrayList<User>();
+		
 		UserService userService = new UserManager();
 		StudentService studentService = new StudentManager();
 		InstructorService ınstructorService = new InstructorManager();
@@ -24,7 +27,7 @@ public class Main {
 		User user1 = new User(1,"Adil KUDU");
 		User user2 = new User(2,"Alim KUDU");
 		
-		List<User> userList = new ArrayList<User>();
+
 		userList.add(user1);
 		userList.add(user2);
 		
@@ -45,7 +48,6 @@ public class Main {
 		Student student1 = new Student(1,"Adil KUDU",28);
 		Student student2 = new Student(2,"Alim KUDU",28);
 		
-		List<Student> studentList = new ArrayList<Student>();
 		studentList.add(student1);
 		studentList.add(student1);
 		
