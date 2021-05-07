@@ -40,7 +40,7 @@ public class FrequentlyAskedQuestionManager implements FrequentlyAskedQuestionSe
 	@Override
 	public void addList(List<FrequentlyAskedQuestion> pfrequentlyAskedQuestionList) {
 		// TODO Auto-generated method stub
-		frequentlyAskedQuestionList.addAll(frequentlyAskedQuestionList);
+		frequentlyAskedQuestionList.addAll(pfrequentlyAskedQuestionList);
 	}
 
 

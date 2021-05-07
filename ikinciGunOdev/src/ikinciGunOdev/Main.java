@@ -54,7 +54,7 @@ public class Main {
 		
 		//liste olarak ekleme. frequentlyAskedQuestionManager
 		frequentlyAskedQuestionService.addList(questionList);
-					
+		
 	}
 
 
