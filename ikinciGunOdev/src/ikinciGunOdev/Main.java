@@ -3,6 +3,8 @@ package ikinciGunOdev;
 import java.util.ArrayList;
 import java.util.List;
 
+import ikinciGunOdev.business.abstracts.CourseCardService;
+import ikinciGunOdev.business.abstracts.FrequentlyAskedQuestionService;
 import ikinciGunOdev.business.concretes.CourseCardManager;
 import ikinciGunOdev.business.concretes.FrequentlyAskedQuestionManager;
 import ikinciGunOdev.entities.concretes.CourseCard;
@@ -15,8 +17,8 @@ public class Main {
 		// TODO Auto-generated method stub
 		List<FrequentlyAskedQuestion> questionList = new ArrayList<FrequentlyAskedQuestion>();
 		
-		CourseCardManager courseCardService = new CourseCardManager();
-		FrequentlyAskedQuestionManager frequentlyAskedQuestionManager = new FrequentlyAskedQuestionManager();
+		CourseCardService courseCardService = new CourseCardManager();
+		FrequentlyAskedQuestionService frequentlyAskedQuestionManager = new FrequentlyAskedQuestionManager();
 		
 		//Kurs kart işlemleri
 		CourseCard javaCourseCard = new CourseCard(1,"Java Kurs İmage","Java Kurs",75,1);
