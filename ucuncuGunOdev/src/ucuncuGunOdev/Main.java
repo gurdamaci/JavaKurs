@@ -51,13 +51,13 @@ public class Main {
 		studentList.add(student1);
 		studentList.add(student1);
 		
-		//user ekleme
+		//Student ekleme
 		for (Student student : studentList) {
 			studentService.add(student);
 		}
 		
 		System.out.println();
-		//user listeleme
+		//Student listeleme
 		List<Student> studentList2 = studentService.getAll();
 		for (Student student : studentList2) {
 			System.out.println("Eklenen Studentlar => " + student.getNameSurname());
